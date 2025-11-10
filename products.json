@@ -1,362 +1,373 @@
-[
-  {
-    "id": 1,
-    "name": "Basmati Rice",
-    "category": "grains",
-    "price": 8.99,
-    "originalPrice": 10.99,
-    "discount": 18,
-    "image": "images/basmati-rice.webp",
-    "description": "Premium aged Basmati rice, 5kg - perfect for biryani"
-  },
-  {
-    "id": 2,
-    "name": "Atta Flour",
-    "category": "grains",
-    "price": 4.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/atta-flour.webp",
-    "description": "Whole wheat chapati flour, 5kg bag"
-  },
-  {
-    "id": 3,
-    "name": "Toor Dal (Pigeon Peas)",
-    "category": "grains",
-    "price": 3.49,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/toor-dal.webp",
-    "description": "Split yellow pigeon peas, 1kg"
-  },
-  {
-    "id": 4,
-    "name": "Chana Dal",
-    "category": "grains",
-    "price": 2.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/chana-dal.webp",
-    "description": "Split chickpeas, ideal for dal dishes, 1kg"
-  },
-  {
-    "id": 5,
-    "name": "Red Lentils (Masoor Dal)",
-    "category": "grains",
-    "price": 2.49,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/red-lentils.webp",
-    "description": "Quick cooking red lentils, 1kg"
-  },
-  {
-    "id": 6,
-    "name": "Ghee (Clarified Butter)",
-    "category": "dairy",
-    "price": 7.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/ghee.webp",
-    "description": "Pure cow ghee, 500g jar - authentic taste"
-  },
-  {
-    "id": 7,
-    "name": "Paneer",
-    "category": "dairy",
-    "price": 3.99,
-    "originalPrice": 4.99,
-    "discount": 20,
-    "image": "images/paneer.webp",
-    "description": "Fresh Indian cottage cheese, 300g"
-  },
-  {
-    "id": 8,
-    "name": "Plain Yogurt (Dahi)",
-    "category": "dairy",
-    "price": 2.49,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/yogurt.webp",
-    "description": "Fresh natural yogurt, 500g tub"
-  },
-  {
-    "id": 9,
-    "name": "Garam Masala",
-    "category": "spices",
-    "price": 2.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/garam-masala.webp",
-    "description": "Authentic Indian spice blend, 100g"
-  },
-  {
-    "id": 10,
-    "name": "Turmeric Powder",
-    "category": "spices",
-    "price": 1.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/turmeric.webp",
-    "description": "Pure turmeric powder (Haldi), 100g"
-  },
-  {
-    "id": 11,
-    "name": "Cumin Seeds",
-    "category": "spices",
-    "price": 2.49,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/cumin.webp",
-    "description": "Whole cumin seeds (Jeera), 100g"
-  },
-  {
-    "id": 12,
-    "name": "Coriander Powder",
-    "category": "spices",
-    "price": 1.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/coriander-powder.webp",
-    "description": "Ground coriander (Dhaniya), 100g"
-  },
-  {
-    "id": 13,
-    "name": "Red Chilli Powder",
-    "category": "spices",
-    "price": 2.29,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/red-chilli.webp",
-    "description": "Hot red chilli powder (Lal Mirch), 100g"
-  },
-  {
-    "id": 14,
-    "name": "Cardamom Pods",
-    "category": "spices",
-    "price": 4.99,
-    "originalPrice": 5.99,
-    "discount": 17,
-    "image": "images/cardamom.webp",
-    "description": "Green cardamom (Elaichi), 50g"
-  },
-  {
-    "id": 15,
-    "name": "Chapati (Pack of 10)",
-    "category": "bakery",
-    "price": 2.49,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/chapati.webp",
-    "description": "Fresh Indian flatbread, ready to heat"
-  },
-  {
-    "id": 16,
-    "name": "Naan Bread (Pack of 4)",
-    "category": "bakery",
-    "price": 1.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/naan.webp",
-    "description": "Soft garlic naan bread, oven ready"
-  },
-  {
-    "id": 17,
-    "name": "Paratha (Pack of 5)",
-    "category": "bakery",
-    "price": 2.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/paratha.webp",
-    "description": "Layered flatbread, ready to cook"
-  },
-  {
-    "id": 18,
-    "name": "Samosas (Pack of 6)",
-    "category": "snacks",
-    "price": 3.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/samosas.webp",
-    "description": "Vegetable samosas, frozen - deep fry"
-  },
-  {
-    "id": 19,
-    "name": "Papadums",
-    "category": "snacks",
-    "price": 1.49,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/papadums.webp",
-    "description": "Plain papadums, 200g pack"
-  },
-  {
-    "id": 20,
-    "name": "Bhujia Sev",
-    "category": "snacks",
-    "price": 2.49,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/bhujia.webp",
-    "description": "Crispy chickpea noodles snack, 400g"
-  },
-  {
-    "id": 21,
-    "name": "Masala Chai Tea",
-    "category": "beverages",
-    "price": 3.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/chai.webp",
-    "description": "Indian spiced tea bags, 100 count"
-  },
-  {
-    "id": 22,
-    "name": "Mango Lassi",
-    "category": "beverages",
-    "price": 2.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/mango-lassi.webp",
-    "description": "Sweet mango yogurt drink, 500ml"
-  },
-  {
-    "id": 23,
-    "name": "Tamarind Paste",
-    "category": "sauces",
-    "price": 2.79,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/tamarind.webp",
-    "description": "Concentrated tamarind paste (Imli), 200g"
-  },
-  {
-    "id": 24,
-    "name": "Mango Pickle (Achar)",
-    "category": "sauces",
-    "price": 3.49,
-    "originalPrice": 4.49,
-    "discount": 22,
-    "image": "images/mango-pickle.webp",
-    "description": "Spicy mango pickle, 300g jar"
-  },
-  {
-    "id": 25,
-    "name": "Mint Chutney",
-    "category": "sauces",
-    "price": 2.29,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/mint-chutney.webp",
-    "description": "Fresh mint and coriander chutney, 200g"
-  },
-  {
-    "id": 26,
-    "name": "Curry Leaves (Fresh)",
-    "category": "vegetables",
-    "price": 1.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/curry-leaves.webp",
-    "description": "Fresh curry leaves (Kadi Patta), 25g"
-  },
-  {
-    "id": 27,
-    "name": "Okra (Bhindi)",
-    "category": "vegetables",
-    "price": 2.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/okra.webp",
-    "description": "Fresh lady fingers, 500g"
-  },
-  {
-    "id": 28,
-    "name": "Coriander (Fresh)",
-    "category": "vegetables",
-    "price": 0.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/coriander.webp",
-    "description": "Fresh coriander bunch (Dhaniya)"
-  },
-  {
-    "id": 29,
-    "name": "Green Chillies",
-    "category": "vegetables",
-    "price": 1.49,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/green-chillies.webp",
-    "description": "Fresh green chillies (Hari Mirch), 100g"
-  },
-  {
-    "id": 30,
-    "name": "Gulab Jamun",
-    "category": "snacks",
-    "price": 4.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/gulab-jamun.webp",
-    "description": "Sweet dumplings in syrup, 1kg tin"
-  },
-  {
-    "id": 31,
-    "name": "Jalebi",
-    "category": "snacks",
-    "price": 3.49,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/jalebi.webp",
-    "description": "Crispy sweet pretzel, 400g pack"
-  },
-  {
-    "id": 32,
-    "name": "Coconut Oil",
-    "category": "sauces",
-    "price": 5.99,
-    "originalPrice": 7.49,
-    "discount": 20,
-    "image": "images/coconut-oil.webp",
-    "description": "Pure coconut cooking oil, 500ml"
-  },
-  {
-    "id": 33,
-    "name": "Mustard Oil",
-    "category": "sauces",
-    "price": 4.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/mustard-oil.webp",
-    "description": "Authentic mustard cooking oil, 500ml"
-  },
-  {
-    "id": 34,
-    "name": "Saffron Threads",
-    "category": "spices",
-    "price": 12.99,
-    "originalPrice": 15.99,
-    "discount": 19,
-    "image": "images/saffron.webp",
-    "description": "Premium Kashmiri saffron (Kesar), 1g"
-  },
-  {
-    "id": 35,
-    "name": "Fenugreek Seeds",
-    "category": "spices",
-    "price": 1.79,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/fenugreek.webp",
-    "description": "Whole fenugreek seeds (Methi), 100g"
-  },
-  {
-    "id": 36,
-    "name": "Alphonso Mango Pulp",
-    "category": "fruits",
-    "price": 3.99,
-    "originalPrice": null,
-    "discount": null,
-    "image": "images/mango-pulp.webp",
-    "description": "Premium mango pulp for desserts, 850g"
+{
+  "categories": {
+    "grains": {
+      "name": "Grains & Pulses",
+      "products": [
+        {
+          "id": 1,
+          "name": "Basmati Rice",
+          "price": 8.99,
+          "originalPrice": 10.99,
+          "discount": 18,
+          "image": "images/basmati-rice.webp",
+          "description": "Premium aged Basmati rice, 5kg - perfect for biryani"
+        },
+        {
+          "id": 2,
+          "name": "Atta Flour",
+          "price": 4.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/atta-flour.webp",
+          "description": "Whole wheat chapati flour, 5kg bag"
+        },
+        {
+          "id": 3,
+          "name": "Toor Dal (Pigeon Peas)",
+          "price": 3.49,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/toor-dal.webp",
+          "description": "Split yellow pigeon peas, 1kg"
+        },
+        {
+          "id": 4,
+          "name": "Chana Dal",
+          "price": 2.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/chana-dal.webp",
+          "description": "Split chickpeas, ideal for dal dishes, 1kg"
+        },
+        {
+          "id": 5,
+          "name": "Red Lentils (Masoor Dal)",
+          "price": 2.49,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/red-lentils.webp",
+          "description": "Quick cooking red lentils, 1kg"
+        }
+      ]
+    },
+    "dairy": {
+      "name": "Dairy",
+      "products": [
+        {
+          "id": 6,
+          "name": "Ghee (Clarified Butter)",
+          "price": 7.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/ghee.webp",
+          "description": "Pure cow ghee, 500g jar - authentic taste"
+        },
+        {
+          "id": 7,
+          "name": "Paneer",
+          "price": 3.99,
+          "originalPrice": 4.99,
+          "discount": 20,
+          "image": "images/paneer.webp",
+          "description": "Fresh Indian cottage cheese, 300g"
+        },
+        {
+          "id": 8,
+          "name": "Plain Yogurt (Dahi)",
+          "price": 2.49,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/yogurt.webp",
+          "description": "Fresh natural yogurt, 500g tub"
+        }
+      ]
+    },
+    "spices": {
+      "name": "Spices",
+      "products": [
+        {
+          "id": 9,
+          "name": "Garam Masala",
+          "price": 2.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/garam-masala.webp",
+          "description": "Authentic Indian spice blend, 100g"
+        },
+        {
+          "id": 10,
+          "name": "Turmeric Powder",
+          "price": 1.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/turmeric.webp",
+          "description": "Pure turmeric powder (Haldi), 100g"
+        },
+        {
+          "id": 11,
+          "name": "Cumin Seeds",
+          "price": 2.49,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/cumin.webp",
+          "description": "Whole cumin seeds (Jeera), 100g"
+        },
+        {
+          "id": 12,
+          "name": "Coriander Powder",
+          "price": 1.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/coriander-powder.webp",
+          "description": "Ground coriander (Dhaniya), 100g"
+        },
+        {
+          "id": 13,
+          "name": "Red Chilli Powder",
+          "price": 2.29,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/red-chilli.webp",
+          "description": "Hot red chilli powder (Lal Mirch), 100g"
+        },
+        {
+          "id": 14,
+          "name": "Cardamom Pods",
+          "price": 4.99,
+          "originalPrice": 5.99,
+          "discount": 17,
+          "image": "images/cardamom.webp",
+          "description": "Green cardamom (Elaichi), 50g"
+        },
+        {
+          "id": 34,
+          "name": "Saffron Threads",
+          "price": 12.99,
+          "originalPrice": 15.99,
+          "discount": 19,
+          "image": "images/saffron.webp",
+          "description": "Premium Kashmiri saffron (Kesar), 1g"
+        },
+        {
+          "id": 35,
+          "name": "Fenugreek Seeds",
+          "price": 1.79,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/fenugreek.webp",
+          "description": "Whole fenugreek seeds (Methi), 100g"
+        }
+      ]
+    },
+    "bakery": {
+      "name": "Bread & Bakery",
+      "products": [
+        {
+          "id": 15,
+          "name": "Chapati (Pack of 10)",
+          "price": 2.49,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/chapati.webp",
+          "description": "Fresh Indian flatbread, ready to heat"
+        },
+        {
+          "id": 16,
+          "name": "Naan Bread (Pack of 4)",
+          "price": 1.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/naan.webp",
+          "description": "Soft garlic naan bread, oven ready"
+        },
+        {
+          "id": 17,
+          "name": "Paratha (Pack of 5)",
+          "price": 2.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/paratha.webp",
+          "description": "Layered flatbread, ready to cook"
+        }
+      ]
+    },
+    "snacks": {
+      "name": "Snacks & Sweets",
+      "products": [
+        {
+          "id": 18,
+          "name": "Samosas (Pack of 6)",
+          "price": 3.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/samosas.webp",
+          "description": "Vegetable samosas, frozen - deep fry"
+        },
+        {
+          "id": 19,
+          "name": "Papadums",
+          "price": 1.49,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/papadums.webp",
+          "description": "Plain papadums, 200g pack"
+        },
+        {
+          "id": 20,
+          "name": "Bhujia Sev",
+          "price": 2.49,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/bhujia.webp",
+          "description": "Crispy chickpea noodles snack, 400g"
+        },
+        {
+          "id": 30,
+          "name": "Gulab Jamun",
+          "price": 4.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/gulab-jamun.webp",
+          "description": "Sweet dumplings in syrup, 1kg tin"
+        },
+        {
+          "id": 31,
+          "name": "Jalebi",
+          "price": 3.49,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/jalebi.webp",
+          "description": "Crispy sweet pretzel, 400g pack"
+        }
+      ]
+    },
+    "beverages": {
+      "name": "Beverages",
+      "products": [
+        {
+          "id": 21,
+          "name": "Masala Chai Tea",
+          "price": 3.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/chai.webp",
+          "description": "Indian spiced tea bags, 100 count"
+        },
+        {
+          "id": 22,
+          "name": "Mango Lassi",
+          "price": 2.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/mango-lassi.webp",
+          "description": "Sweet mango yogurt drink, 500ml"
+        }
+      ]
+    },
+    "sauces": {
+      "name": "Sauces & Oils",
+      "products": [
+        {
+          "id": 23,
+          "name": "Tamarind Paste",
+          "price": 2.79,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/tamarind.webp",
+          "description": "Concentrated tamarind paste (Imli), 200g"
+        },
+        {
+          "id": 24,
+          "name": "Mango Pickle (Achar)",
+          "price": 3.49,
+          "originalPrice": 4.49,
+          "discount": 22,
+          "image": "images/mango-pickle.webp",
+          "description": "Spicy mango pickle, 300g jar"
+        },
+        {
+          "id": 25,
+          "name": "Mint Chutney",
+          "price": 2.29,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/mint-chutney.webp",
+          "description": "Fresh mint and coriander chutney, 200g"
+        },
+        {
+          "id": 32,
+          "name": "Coconut Oil",
+          "price": 5.99,
+          "originalPrice": 7.49,
+          "discount": 20,
+          "image": "images/coconut-oil.webp",
+          "description": "Pure coconut cooking oil, 500ml"
+        },
+        {
+          "id": 33,
+          "name": "Mustard Oil",
+          "price": 4.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/mustard-oil.webp",
+          "description": "Authentic mustard cooking oil, 500ml"
+        }
+      ]
+    },
+    "vegetables": {
+      "name": "Fresh Vegetables",
+      "products": [
+        {
+          "id": 26,
+          "name": "Curry Leaves (Fresh)",
+          "price": 1.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/curry-leaves.webp",
+          "description": "Fresh curry leaves (Kadi Patta), 25g"
+        },
+        {
+          "id": 27,
+          "name": "Okra (Bhindi)",
+          "price": 2.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/okra.webp",
+          "description": "Fresh lady fingers, 500g"
+        },
+        {
+          "id": 28,
+          "name": "Coriander (Fresh)",
+          "price": 0.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/coriander.webp",
+          "description": "Fresh coriander bunch (Dhaniya)"
+        },
+        {
+          "id": 29,
+          "name": "Green Chillies",
+          "price": 1.49,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/green-chillies.webp",
+          "description": "Fresh green chillies (Hari Mirch), 100g"
+        }
+      ]
+    },
+    "fruits": {
+      "name": "Fruits",
+      "products": [
+        {
+          "id": 36,
+          "name": "Alphonso Mango Pulp",
+          "price": 3.99,
+          "originalPrice": null,
+          "discount": null,
+          "image": "images/mango-pulp.webp",
+          "description": "Premium mango pulp for desserts, 850g"
+        }
+      ]
+    }
   }
-]
+}

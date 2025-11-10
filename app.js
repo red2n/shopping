@@ -1,13 +1,27 @@
 // Shopping Cart State
 let cart = [];
 let products = [];
+let productData = {};
 let currentCategory = 'all';
 
 // Load products from JSON
 async function loadProducts() {
     try {
         const response = await fetch('products.json');
-        products = await response.json();
+        productData = await response.json();
+
+        // Flatten products from tree structure
+        products = [];
+        Object.keys(productData.categories).forEach(categoryKey => {
+            const category = productData.categories[categoryKey];
+            category.products.forEach(product => {
+                products.push({
+                    ...product,
+                    category: categoryKey
+                });
+            });
+        });
+
         generateCategories();
         displayProducts(products);
         hideLoading();
@@ -20,42 +34,31 @@ async function loadProducts() {
 
 // Generate categories dynamically from products
 function generateCategories() {
-    // Get unique categories from products
-    const categories = [...new Set(products.map(p => p.category))];
-    
-    // Category display names mapping
-    const categoryNames = {
-        'grains': 'Grains & Pulses',
-        'spices': 'Spices',
-        'dairy': 'Dairy',
-        'bakery': 'Bread & Bakery',
-        'snacks': 'Snacks & Sweets',
-        'vegetables': 'Fresh Vegetables',
-        'sauces': 'Sauces & Oils',
-        'beverages': 'Beverages',
-        'fruits': 'Fruits'
-    };
-    
+    // Get categories from the tree structure
+    const categories = Object.keys(productData.categories);
+
     // Generate mobile menu
     const mobileMenu = document.querySelector('#mobileMenu ul');
     mobileMenu.innerHTML = '<li><a href="#" class="block px-4 py-3 hover:bg-gray-100" data-category="all">All Products</a></li>';
-    
-    categories.forEach(category => {
+
+    categories.forEach(categoryKey => {
+        const category = productData.categories[categoryKey];
         const li = document.createElement('li');
-        li.innerHTML = `<a href="#" class="block px-4 py-3 hover:bg-gray-100" data-category="${category}">${categoryNames[category] || category}</a>`;
+        li.innerHTML = `<a href="#" class="block px-4 py-3 hover:bg-gray-100" data-category="${categoryKey}">${category.name}</a>`;
         mobileMenu.appendChild(li);
     });
-    
+
     // Generate desktop menu
     const desktopMenu = document.querySelector('nav.hidden.lg\\:block ul');
     desktopMenu.innerHTML = '<li><a href="#" class="block py-4 px-2 text-gray-700 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 whitespace-nowrap font-medium" data-category="all">All Products</a></li>';
-    
-    categories.forEach(category => {
+
+    categories.forEach(categoryKey => {
+        const category = productData.categories[categoryKey];
         const li = document.createElement('li');
-        li.innerHTML = `<a href="#" class="block py-4 px-2 text-gray-700 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 whitespace-nowrap" data-category="${category}">${categoryNames[category] || category}</a>`;
+        li.innerHTML = `<a href="#" class="block py-4 px-2 text-gray-700 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 whitespace-nowrap" data-category="${categoryKey}">${category.name}</a>`;
         desktopMenu.appendChild(li);
     });
-    
+
     // Add event listeners to all category links
     document.querySelectorAll('[data-category]').forEach(link => {
         link.addEventListener('click', (e) => {
@@ -106,20 +109,6 @@ function displayProducts(productsToDisplay) {
 function filterByCategory(category) {
     currentCategory = category;
     const categoryTitle = document.getElementById('categoryTitle');
-    
-    // Category display names mapping
-    const categoryNames = {
-        'all': 'All Products',
-        'grains': 'Grains & Pulses',
-        'spices': 'Spices',
-        'dairy': 'Dairy',
-        'bakery': 'Bread & Bakery',
-        'snacks': 'Snacks & Sweets',
-        'vegetables': 'Fresh Vegetables',
-        'sauces': 'Sauces & Oils',
-        'beverages': 'Beverages',
-        'fruits': 'Fruits'
-    };
 
     // Update active state on nav items
     document.querySelectorAll('[data-category]').forEach(link => {
@@ -131,10 +120,11 @@ function filterByCategory(category) {
     });
 
     if (category === 'all') {
-        categoryTitle.textContent = categoryNames['all'];
+        categoryTitle.textContent = 'All Products';
         displayProducts(products);
     } else {
-        categoryTitle.textContent = categoryNames[category] || category.charAt(0).toUpperCase() + category.slice(1);
+        const categoryName = productData.categories[category]?.name || category;
+        categoryTitle.textContent = categoryName;
         const filtered = products.filter(p => p.category === category);
         displayProducts(filtered);
     }
