@@ -80,8 +80,8 @@ function initializeCarousel(images) {
         const imgSrc = image.src || image;
         return `
         <div class="relative min-w-full h-48 sm:h-60 md:h-72 lg:h-80 flex-shrink-0">
-            <img src="${imgSrc}" alt="${image.alt || 'Carousel image ' + (index + 1)}" 
-                 class="w-full h-full object-cover" 
+            <img src="${imgSrc}" alt="${image.alt || 'Carousel image ' + (index + 1)}"
+                 class="w-full h-full object-cover"
                  onerror="console.error('Failed to load carousel image:', this.src)">
         </div>
     `}).join('');
@@ -168,7 +168,7 @@ function initializeCarousel(images) {
 
     goToSlide(0);
     startAutoplay();
-    
+
     console.log('Carousel initialized with', images.length, 'images');
 }
 

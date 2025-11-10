@@ -1,0 +1,13 @@
+<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mega" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#16a34a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" fill="url(#mega)"/>
+  <text x="600" y="140" font-family="Arial, sans-serif" font-size="70" font-weight="bold" fill="white" text-anchor="middle">💥 MEGA SALE 💥</text>
+  <text x="600" y="220" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#fef9c3" text-anchor="middle">EXTRA 30% OFF</text>
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="32" fill="white" text-anchor="middle">On Your First Order</text>
+  <text x="600" y="340" font-family="Arial, sans-serif" font-size="28" fill="#d1fae5" text-anchor="middle">🛒 Use Code: FRESH30 • Shop Now! 🛒</text>
+</svg>

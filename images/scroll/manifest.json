@@ -1,8 +1,8 @@
 {
   "images": [
-    { "src": "images/scroll/banner1.svg", "alt": "Fresh Indian Groceries - Save Up to 30%" },
-    { "src": "images/scroll/banner2.svg", "alt": "Authentic Spices - Special Offer This Week" },
-    { "src": "images/scroll/banner3.svg", "alt": "Premium Basmati Rice - Limited Stock" },
-    { "src": "images/scroll/banner4.svg", "alt": "Fresh Dairy & Snacks - Free Delivery Over £50" }
+    { "src": "images/scroll/diwali-offer.svg", "alt": "Diwali Dhamaka - Up to 50% Off on Sweets & Snacks" },
+    { "src": "images/scroll/christmas-offer.svg", "alt": "Christmas Special - Buy 2 Get 1 Free" },
+    { "src": "images/scroll/newyear-offer.svg", "alt": "New Year Blast 2026 - Flat 40% Off" },
+    { "src": "images/scroll/mega-sale.svg", "alt": "Mega Sale - Extra 30% Off First Order" }
   ]
 }
