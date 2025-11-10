@@ -8,6 +8,7 @@ async function loadProducts() {
     try {
         const response = await fetch('products.json');
         products = await response.json();
+        generateCategories();
         displayProducts(products);
         hideLoading();
     } catch (error) {
@@ -15,6 +16,54 @@ async function loadProducts() {
         hideLoading();
         showEmptyState();
     }
+}
+
+// Generate categories dynamically from products
+function generateCategories() {
+    // Get unique categories from products
+    const categories = [...new Set(products.map(p => p.category))];
+    
+    // Category display names mapping
+    const categoryNames = {
+        'grains': 'Grains & Pulses',
+        'spices': 'Spices',
+        'dairy': 'Dairy',
+        'bakery': 'Bread & Bakery',
+        'snacks': 'Snacks & Sweets',
+        'vegetables': 'Fresh Vegetables',
+        'sauces': 'Sauces & Oils',
+        'beverages': 'Beverages',
+        'fruits': 'Fruits'
+    };
+    
+    // Generate mobile menu
+    const mobileMenu = document.querySelector('#mobileMenu ul');
+    mobileMenu.innerHTML = '<li><a href="#" class="block px-4 py-3 hover:bg-gray-100" data-category="all">All Products</a></li>';
+    
+    categories.forEach(category => {
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="#" class="block px-4 py-3 hover:bg-gray-100" data-category="${category}">${categoryNames[category] || category}</a>`;
+        mobileMenu.appendChild(li);
+    });
+    
+    // Generate desktop menu
+    const desktopMenu = document.querySelector('nav.hidden.lg\\:block ul');
+    desktopMenu.innerHTML = '<li><a href="#" class="block py-4 px-2 text-gray-700 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 whitespace-nowrap font-medium" data-category="all">All Products</a></li>';
+    
+    categories.forEach(category => {
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="#" class="block py-4 px-2 text-gray-700 hover:text-green-600 border-b-2 border-transparent hover:border-green-600 whitespace-nowrap" data-category="${category}">${categoryNames[category] || category}</a>`;
+        desktopMenu.appendChild(li);
+    });
+    
+    // Add event listeners to all category links
+    document.querySelectorAll('[data-category]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const category = e.currentTarget.getAttribute('data-category');
+            filterByCategory(category);
+        });
+    });
 }
 
 // Display products in grid
@@ -57,6 +106,20 @@ function displayProducts(productsToDisplay) {
 function filterByCategory(category) {
     currentCategory = category;
     const categoryTitle = document.getElementById('categoryTitle');
+    
+    // Category display names mapping
+    const categoryNames = {
+        'all': 'All Products',
+        'grains': 'Grains & Pulses',
+        'spices': 'Spices',
+        'dairy': 'Dairy',
+        'bakery': 'Bread & Bakery',
+        'snacks': 'Snacks & Sweets',
+        'vegetables': 'Fresh Vegetables',
+        'sauces': 'Sauces & Oils',
+        'beverages': 'Beverages',
+        'fruits': 'Fruits'
+    };
 
     // Update active state on nav items
     document.querySelectorAll('[data-category]').forEach(link => {
@@ -68,10 +131,10 @@ function filterByCategory(category) {
     });
 
     if (category === 'all') {
-        categoryTitle.textContent = 'All Products';
+        categoryTitle.textContent = categoryNames['all'];
         displayProducts(products);
     } else {
-        categoryTitle.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+        categoryTitle.textContent = categoryNames[category] || category.charAt(0).toUpperCase() + category.slice(1);
         const filtered = products.filter(p => p.category === category);
         displayProducts(filtered);
     }
@@ -269,15 +332,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile menu toggle
     document.getElementById('menuToggle').addEventListener('click', () => {
         document.getElementById('mobileMenu').classList.toggle('hidden');
-    });
-
-    // Category navigation
-    document.querySelectorAll('[data-category]').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const category = e.currentTarget.getAttribute('data-category');
-            filterByCategory(category);
-        });
     });
 
     // Search functionality
