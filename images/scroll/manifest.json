@@ -1,8 +1,8 @@
 {
   "images": [
-    { "src": "images/scroll/ghee.webp" },
-    { "src": "images/scroll/jalebi.webp" },
-    { "src": "images/scroll/mango-pulp.webp" },
-    { "src": "images/scroll/samosas.webp" }
+    { "src": "images/scroll/banner1.svg", "alt": "Fresh Indian Groceries - Save Up to 30%" },
+    { "src": "images/scroll/banner2.svg", "alt": "Authentic Spices - Special Offer This Week" },
+    { "src": "images/scroll/banner3.svg", "alt": "Premium Basmati Rice - Limited Stock" },
+    { "src": "images/scroll/banner4.svg", "alt": "Fresh Dairy & Snacks - Free Delivery Over £50" }
   ]
 }
