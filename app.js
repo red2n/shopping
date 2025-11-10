@@ -200,6 +200,45 @@ function toggleCart() {
     modal.classList.toggle('hidden');
 }
 
+// Share cart on WhatsApp
+function shareOnWhatsApp() {
+    if (cart.length === 0) {
+        alert('Your cart is empty! Add some products first.');
+        return;
+    }
+    
+    const cartTotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+    
+    // Create table-like structure with proper formatting
+    let message = `🛒 *FreshMart Shopping List*\n`;
+    message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+    
+    // Add each item with nice formatting
+    cart.forEach((item, index) => {
+        const itemTotal = item.price * item.quantity;
+        message += `${index + 1}. *${item.name}*\n`;
+        message += `   Qty: ${item.quantity} × $${item.price.toFixed(2)} = *$${itemTotal.toFixed(2)}*\n\n`;
+    });
+    
+    // Add summary
+    message += `━━━━━━━━━━━━━━━━━━━━\n`;
+    message += `📦 Total Items: *${itemCount}*\n`;
+    message += `💰 Total Amount: *$${cartTotal.toFixed(2)}*\n`;
+    message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+    message += `📍 Order from: FreshMart Online\n`;
+    message += `🕒 ${new Date().toLocaleString()}\n`;
+    
+    // URL encode the message
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/?text=${encodedMessage}`;
+    
+    // Open WhatsApp
+    window.open(whatsappURL, '_blank');
+}
+
 // Show/hide loading
 function hideLoading() {
     document.getElementById('loading').classList.add('hidden');
@@ -261,6 +300,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('cartBtn').addEventListener('click', toggleCart);
     document.getElementById('cartBtnMobile').addEventListener('click', toggleCart);
     document.getElementById('closeCart').addEventListener('click', toggleCart);
+    
+    // WhatsApp share button
+    document.getElementById('shareWhatsApp').addEventListener('click', shareOnWhatsApp);
 
     // Close cart when clicking outside
     document.getElementById('cartModal').addEventListener('click', (e) => {
