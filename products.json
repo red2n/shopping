@@ -6,7 +6,7 @@
     "price": 8.99,
     "originalPrice": 10.99,
     "discount": 18,
-    "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&h=400&fit=crop",
+    "image": "images/basmati-rice.webp",
     "description": "Premium aged Basmati rice, 5kg - perfect for biryani"
   },
   {
@@ -16,7 +16,7 @@
     "price": 4.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1628760534413-8cb4bcd3e3d1?w=400&h=400&fit=crop",
+    "image": "images/atta-flour.webp",
     "description": "Whole wheat chapati flour, 5kg bag"
   },
   {
@@ -26,7 +26,7 @@
     "price": 3.49,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1599909533232-5b0751b97e97?w=400&h=400&fit=crop",
+    "image": "images/toor-dal.webp",
     "description": "Split yellow pigeon peas, 1kg"
   },
   {
@@ -36,7 +36,7 @@
     "price": 2.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&h=400&fit=crop",
+    "image": "images/chana-dal.webp",
     "description": "Split chickpeas, ideal for dal dishes, 1kg"
   },
   {
@@ -46,7 +46,7 @@
     "price": 2.49,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1610824283087-9c4de94e3861?w=400&h=400&fit=crop",
+    "image": "images/red-lentils.webp",
     "description": "Quick cooking red lentils, 1kg"
   },
   {
@@ -56,7 +56,7 @@
     "price": 7.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1630409346730-a0e76fc84a68?w=400&h=400&fit=crop",
+    "image": "images/ghee.webp",
     "description": "Pure cow ghee, 500g jar - authentic taste"
   },
   {
@@ -66,7 +66,7 @@
     "price": 3.99,
     "originalPrice": 4.99,
     "discount": 20,
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=400&fit=crop",
+    "image": "images/paneer.webp",
     "description": "Fresh Indian cottage cheese, 300g"
   },
   {
@@ -76,7 +76,7 @@
     "price": 2.49,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=400&fit=crop",
+    "image": "images/yogurt.webp",
     "description": "Fresh natural yogurt, 500g tub"
   },
   {
@@ -86,7 +86,7 @@
     "price": 2.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1596040033229-a0b3b83c7f20?w=400&h=400&fit=crop",
+    "image": "images/garam-masala.webp",
     "description": "Authentic Indian spice blend, 100g"
   },
   {
@@ -96,7 +96,7 @@
     "price": 1.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=400&h=400&fit=crop",
+    "image": "images/turmeric.webp",
     "description": "Pure turmeric powder (Haldi), 100g"
   },
   {
@@ -106,7 +106,7 @@
     "price": 2.49,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1599909533232-5b0751b97e97?w=400&h=400&fit=crop",
+    "image": "images/cumin.webp",
     "description": "Whole cumin seeds (Jeera), 100g"
   },
   {
@@ -116,7 +116,7 @@
     "price": 1.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1596040033229-a0b3b83c7f20?w=400&h=400&fit=crop",
+    "image": "images/coriander-powder.webp",
     "description": "Ground coriander (Dhaniya), 100g"
   },
   {
@@ -126,7 +126,7 @@
     "price": 2.29,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1583032015627-7a5f580a17e0?w=400&h=400&fit=crop",
+    "image": "images/red-chilli.webp",
     "description": "Hot red chilli powder (Lal Mirch), 100g"
   },
   {
@@ -136,7 +136,7 @@
     "price": 4.99,
     "originalPrice": 5.99,
     "discount": 17,
-    "image": "https://images.unsplash.com/photo-1610824283087-9c4de94e3861?w=400&h=400&fit=crop",
+    "image": "images/cardamom.webp",
     "description": "Green cardamom (Elaichi), 50g"
   },
   {
@@ -146,7 +146,7 @@
     "price": 2.49,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1628763611611-ada91d6c4eb6?w=400&h=400&fit=crop",
+    "image": "images/chapati.webp",
     "description": "Fresh Indian flatbread, ready to heat"
   },
   {
@@ -156,7 +156,7 @@
     "price": 1.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=400&fit=crop",
+    "image": "images/naan.webp",
     "description": "Soft garlic naan bread, oven ready"
   },
   {
@@ -166,7 +166,7 @@
     "price": 2.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1589301773859-34226b93476c?w=400&h=400&fit=crop",
+    "image": "images/paratha.webp",
     "description": "Layered flatbread, ready to cook"
   },
   {
@@ -176,7 +176,7 @@
     "price": 3.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=400&fit=crop",
+    "image": "images/samosas.webp",
     "description": "Vegetable samosas, frozen - deep fry"
   },
   {
@@ -186,7 +186,7 @@
     "price": 1.49,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&h=400&fit=crop",
+    "image": "images/papadums.webp",
     "description": "Plain papadums, 200g pack"
   },
   {
@@ -196,7 +196,7 @@
     "price": 2.49,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=400&h=400&fit=crop",
+    "image": "images/bhujia.webp",
     "description": "Crispy chickpea noodles snack, 400g"
   },
   {
@@ -206,7 +206,7 @@
     "price": 3.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&h=400&fit=crop",
+    "image": "images/chai.webp",
     "description": "Indian spiced tea bags, 100 count"
   },
   {
@@ -216,7 +216,7 @@
     "price": 2.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1589651178017-d90c5de44c88?w=400&h=400&fit=crop",
+    "image": "images/mango-lassi.webp",
     "description": "Sweet mango yogurt drink, 500ml"
   },
   {
@@ -226,7 +226,7 @@
     "price": 2.79,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1596040033229-a0b3b83c7f20?w=400&h=400&fit=crop",
+    "image": "images/tamarind.webp",
     "description": "Concentrated tamarind paste (Imli), 200g"
   },
   {
@@ -236,7 +236,7 @@
     "price": 3.49,
     "originalPrice": 4.49,
     "discount": 22,
-    "image": "https://images.unsplash.com/photo-1599909533232-5b0751b97e97?w=400&h=400&fit=crop",
+    "image": "images/mango-pickle.webp",
     "description": "Spicy mango pickle, 300g jar"
   },
   {
@@ -246,7 +246,7 @@
     "price": 2.29,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&h=400&fit=crop",
+    "image": "images/mint-chutney.webp",
     "description": "Fresh mint and coriander chutney, 200g"
   },
   {
@@ -256,7 +256,7 @@
     "price": 1.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1589621316382-008455b857cd?w=400&h=400&fit=crop",
+    "image": "images/curry-leaves.webp",
     "description": "Fresh curry leaves (Kadi Patta), 25g"
   },
   {
@@ -266,7 +266,7 @@
     "price": 2.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1597943544374-93e5e3f8ba40?w=400&h=400&fit=crop",
+    "image": "images/okra.webp",
     "description": "Fresh lady fingers, 500g"
   },
   {
@@ -276,7 +276,7 @@
     "price": 0.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1574335735643-b1e0735f7cda?w=400&h=400&fit=crop",
+    "image": "images/coriander.webp",
     "description": "Fresh coriander bunch (Dhaniya)"
   },
   {
@@ -286,7 +286,7 @@
     "price": 1.49,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1597943544374-93e5e3f8ba40?w=400&h=400&fit=crop",
+    "image": "images/green-chillies.webp",
     "description": "Fresh green chillies (Hari Mirch), 100g"
   },
   {
@@ -296,7 +296,7 @@
     "price": 4.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=400&fit=crop",
+    "image": "images/gulab-jamun.webp",
     "description": "Sweet dumplings in syrup, 1kg tin"
   },
   {
@@ -306,7 +306,7 @@
     "price": 3.49,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1589301773859-34226b93476c?w=400&h=400&fit=crop",
+    "image": "images/jalebi.webp",
     "description": "Crispy sweet pretzel, 400g pack"
   },
   {
@@ -316,7 +316,7 @@
     "price": 5.99,
     "originalPrice": 7.49,
     "discount": 20,
-    "image": "https://images.unsplash.com/photo-1628760534413-8cb4bcd3e3d1?w=400&h=400&fit=crop",
+    "image": "images/coconut-oil.webp",
     "description": "Pure coconut cooking oil, 500ml"
   },
   {
@@ -326,7 +326,7 @@
     "price": 4.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=400&fit=crop",
+    "image": "images/mustard-oil.webp",
     "description": "Authentic mustard cooking oil, 500ml"
   },
   {
@@ -336,7 +336,7 @@
     "price": 12.99,
     "originalPrice": 15.99,
     "discount": 19,
-    "image": "https://images.unsplash.com/photo-1610824283087-9c4de94e3861?w=400&h=400&fit=crop",
+    "image": "images/saffron.webp",
     "description": "Premium Kashmiri saffron (Kesar), 1g"
   },
   {
@@ -346,7 +346,7 @@
     "price": 1.79,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1599909533232-5b0751b97e97?w=400&h=400&fit=crop",
+    "image": "images/fenugreek.webp",
     "description": "Whole fenugreek seeds (Methi), 100g"
   },
   {
@@ -356,7 +356,7 @@
     "price": 3.99,
     "originalPrice": null,
     "discount": null,
-    "image": "https://images.unsplash.com/photo-1553279091-ac3e1c785ee0?w=400&h=400&fit=crop",
+    "image": "images/mango-pulp.webp",
     "description": "Premium mango pulp for desserts, 850g"
   }
 ]
