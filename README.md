@@ -59,10 +59,10 @@ shopping/
    ```bash
    # Using Python 3
    python3 -m http.server 8000
-   
+
    # Using Node.js
    npx serve
-   
+
    # Using PHP
    php -S localhost:8000
    ```
