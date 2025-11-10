@@ -65,6 +65,26 @@
         </div>
     </nav>
 
+    <!-- Hero Carousel -->
+    <section id="carouselSection" class="bg-white shadow-sm hidden">
+        <div class="container mx-auto px-4 py-6">
+            <div class="relative">
+                <div id="carouselTrack" class="overflow-hidden rounded-2xl">
+                    <div id="carouselSlides" class="flex transition-transform duration-700 ease-out">
+                        <!-- Slides will be injected dynamically -->
+                    </div>
+                </div>
+                <button id="carouselPrev" class="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-700 rounded-full h-10 w-10 justify-center items-center shadow-md transition">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="carouselNext" class="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-700 rounded-full h-10 w-10 justify-center items-center shadow-md transition">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div id="carouselIndicators" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-6">
         <!-- Category Title -->

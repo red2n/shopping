@@ -3,6 +3,174 @@ let cart = [];
 let products = [];
 let productData = {};
 let currentCategory = 'all';
+const carouselState = {
+    images: [],
+    currentIndex: 0,
+    intervalId: null,
+    delay: 6000,
+};
+
+// Load carousel images from static manifest
+async function loadCarouselImages() {
+    const carouselSection = document.getElementById('carouselSection');
+    if (!carouselSection) {
+        return;
+    }
+
+    try {
+        const response = await fetch('images/scroll/manifest.json', {
+            headers: {
+                'Cache-Control': 'no-cache',
+            },
+        });
+        if (!response.ok) {
+            throw new Error(`Failed to fetch carousel images: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const images = Array.isArray(data.images) ? data.images : [];
+
+        if (images.length === 0) {
+            carouselSection.classList.add('hidden');
+            return;
+        }
+
+        initializeCarousel(images);
+    } catch (error) {
+        console.error('Error loading carousel images:', error);
+        carouselSection.classList.add('hidden');
+    }
+}
+
+function initializeCarousel(images) {
+    const slidesContainer = document.getElementById('carouselSlides');
+    const indicatorsContainer = document.getElementById('carouselIndicators');
+    const prevButton = document.getElementById('carouselPrev');
+    const nextButton = document.getElementById('carouselNext');
+    const track = document.getElementById('carouselTrack');
+    const carouselSection = document.getElementById('carouselSection');
+
+    if (!slidesContainer || !indicatorsContainer || !track || !prevButton || !nextButton) {
+        console.error('Carousel elements not found in DOM');
+        return;
+    }
+
+    if (carouselSection) {
+        carouselSection.classList.remove('hidden');
+    }
+
+    if (images.length <= 1) {
+        prevButton?.classList.add('hidden');
+        nextButton?.classList.add('hidden');
+    } else {
+        prevButton?.classList.remove('hidden');
+        nextButton?.classList.remove('hidden');
+    }
+
+    carouselState.images = images;
+    carouselState.currentIndex = 0;
+
+    // Clear autoplay if already running
+    if (carouselState.intervalId) {
+        clearInterval(carouselState.intervalId);
+        carouselState.intervalId = null;
+    }
+
+    slidesContainer.innerHTML = images.map((image, index) => {
+        const imgSrc = image.src || image;
+        return `
+        <div class="relative min-w-full h-48 sm:h-60 md:h-72 lg:h-80 flex-shrink-0">
+            <img src="${imgSrc}" alt="${image.alt || 'Carousel image ' + (index + 1)}" 
+                 class="w-full h-full object-cover" 
+                 onerror="console.error('Failed to load carousel image:', this.src)">
+        </div>
+    `}).join('');
+
+    indicatorsContainer.innerHTML = images.map((_image, index) => `
+        <button data-index="${index}" class="h-2 w-2 rounded-full bg-white/60 border border-white/70 transition-all duration-300"></button>
+    `).join('');
+
+    if (images.length <= 1) {
+        indicatorsContainer.classList.add('hidden');
+    } else {
+        indicatorsContainer.classList.remove('hidden');
+    }
+
+    const indicatorButtons = Array.from(indicatorsContainer.querySelectorAll('button'));
+
+    const goToSlide = (index) => {
+        if (!carouselState.images.length) return;
+        if (index < 0) {
+            carouselState.currentIndex = carouselState.images.length - 1;
+        } else if (index >= carouselState.images.length) {
+            carouselState.currentIndex = 0;
+        } else {
+            carouselState.currentIndex = index;
+        }
+
+        slidesContainer.style.transform = `translateX(-${carouselState.currentIndex * 100}%)`;
+
+        indicatorButtons.forEach((button, btnIndex) => {
+            if (btnIndex === carouselState.currentIndex) {
+                button.classList.add('bg-white', 'w-3');
+                button.classList.remove('bg-white/60');
+            } else {
+                button.classList.remove('bg-white');
+                button.classList.add('bg-white/60');
+                button.classList.remove('w-3');
+            }
+        });
+    };
+
+    const startAutoplay = () => {
+        if (carouselState.images.length <= 1) return;
+        if (carouselState.intervalId) return;
+        carouselState.intervalId = setInterval(() => {
+            goToSlide(carouselState.currentIndex + 1);
+        }, carouselState.delay);
+    };
+
+    const stopAutoplay = () => {
+        if (!carouselState.intervalId) return;
+        clearInterval(carouselState.intervalId);
+        carouselState.intervalId = null;
+    };
+
+    if (prevButton) {
+        prevButton.onclick = () => {
+            stopAutoplay();
+            goToSlide(carouselState.currentIndex - 1);
+            startAutoplay();
+        };
+    }
+
+    if (nextButton) {
+        nextButton.onclick = () => {
+            stopAutoplay();
+            goToSlide(carouselState.currentIndex + 1);
+            startAutoplay();
+        };
+    }
+
+    indicatorButtons.forEach((button) => {
+        button.addEventListener('click', (event) => {
+            const { index } = event.currentTarget.dataset;
+            stopAutoplay();
+            goToSlide(Number(index));
+            startAutoplay();
+        });
+    });
+
+    if (track) {
+        track.addEventListener('mouseenter', stopAutoplay);
+        track.addEventListener('mouseleave', startAutoplay);
+    }
+
+    goToSlide(0);
+    startAutoplay();
+    
+    console.log('Carousel initialized with', images.length, 'images');
+}
 
 // Load products from JSON
 async function loadProducts() {
@@ -311,6 +479,7 @@ function hideEmptyState() {
 document.addEventListener('DOMContentLoaded', () => {
     // Load products
     loadProducts();
+    loadCarouselImages();
 
     // Load cart from localStorage
     const savedCart = localStorage.getItem('cart');
