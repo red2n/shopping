@@ -191,6 +191,7 @@ async function loadProducts() {
         });
 
         generateCategories();
+        generateCategoryLinks();
         displayProducts(products);
         hideLoading();
     } catch (error) {
@@ -233,6 +234,65 @@ function generateCategories() {
             e.preventDefault();
             const category = e.currentTarget.getAttribute('data-category');
             filterByCategory(category);
+        });
+    });
+}
+
+// Generate category quick links
+function generateCategoryLinks() {
+    const categoryLinksContainer = document.getElementById('categoryLinks');
+    if (!categoryLinksContainer) return;
+
+    const categoryIcons = {
+        'grains': 'fa-seedling',
+        'dairy': 'fa-cheese',
+        'spices': 'fa-pepper-hot',
+        'snacks': 'fa-cookie-bite',
+        'sweets': 'fa-candy-cane',
+        'beverages': 'fa-mug-hot',
+        'frozen': 'fa-snowflake',
+        'oils': 'fa-droplet',
+        'ready': 'fa-utensils'
+    };
+
+    const categoryColors = {
+        'grains': 'bg-amber-100 text-amber-700 hover:bg-amber-200',
+        'dairy': 'bg-blue-100 text-blue-700 hover:bg-blue-200',
+        'spices': 'bg-red-100 text-red-700 hover:bg-red-200',
+        'snacks': 'bg-orange-100 text-orange-700 hover:bg-orange-200',
+        'sweets': 'bg-pink-100 text-pink-700 hover:bg-pink-200',
+        'beverages': 'bg-cyan-100 text-cyan-700 hover:bg-cyan-200',
+        'frozen': 'bg-indigo-100 text-indigo-700 hover:bg-indigo-200',
+        'oils': 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200',
+        'ready': 'bg-green-100 text-green-700 hover:bg-green-200'
+    };
+
+    const categories = Object.keys(productData.categories);
+
+    categoryLinksContainer.innerHTML = categories.map(categoryKey => {
+        const category = productData.categories[categoryKey];
+        const icon = categoryIcons[categoryKey] || 'fa-tag';
+        const colorClass = categoryColors[categoryKey] || 'bg-gray-100 text-gray-700 hover:bg-gray-200';
+
+        return `
+            <a href="#" data-category="${categoryKey}" 
+               class="category-link flex flex-col items-center justify-center p-4 rounded-xl ${colorClass} transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md">
+                <div class="text-3xl mb-2">
+                    <i class="fas ${icon}"></i>
+                </div>
+                <span class="text-sm md:text-base font-semibold text-center">${category.name}</span>
+            </a>
+        `;
+    }).join('');
+
+    // Add event listeners to category links
+    document.querySelectorAll('.category-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const category = e.currentTarget.getAttribute('data-category');
+            filterByCategory(category);
+            // Scroll to products section
+            document.getElementById('categoryTitle').scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
 }
