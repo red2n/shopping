@@ -41,8 +41,8 @@ function displayProducts(productsToDisplay) {
                 <p class="text-xs text-gray-500 mb-2 line-clamp-2 hidden sm:block">${product.description}</p>
                 <div class="flex items-center justify-between">
                     <div>
-                        <span class="text-lg md:text-xl font-bold text-green-600">$${product.price.toFixed(2)}</span>
-                        ${product.originalPrice ? `<span class="text-xs text-gray-400 line-through ml-1">$${product.originalPrice.toFixed(2)}</span>` : ''}
+                        <span class="text-lg md:text-xl font-bold text-green-600">£${product.price.toFixed(2)}</span>
+                        ${product.originalPrice ? `<span class="text-xs text-gray-400 line-through ml-1">£${product.originalPrice.toFixed(2)}</span>` : ''}
                     </div>
                     <button onclick="addToCart(${product.id})" class="bg-green-600 text-white px-3 py-2 md:px-4 md:py-2 rounded-lg hover:bg-green-700 transition text-sm">
                         <i class="fas fa-plus"></i>
@@ -146,7 +146,7 @@ function updateCart() {
     document.getElementById('cartCountMobile').textContent = cartCount;
 
     // Update cart total
-    document.getElementById('cartTotal').textContent = `$${cartTotal.toFixed(2)}`;
+    document.getElementById('cartTotal').textContent = `£${cartTotal.toFixed(2)}`;
 
     // Update cart items
     const cartItemsContainer = document.getElementById('cartItems');
@@ -164,7 +164,7 @@ function updateCart() {
                 <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded">
                 <div class="flex-1">
                     <h4 class="font-semibold text-sm">${item.name}</h4>
-                    <p class="text-green-600 font-bold">$${item.price.toFixed(2)}</p>
+                    <p class="text-green-600 font-bold">£${item.price.toFixed(2)}</p>
                 </div>
                 <div class="flex items-center space-x-2">
                     <button onclick="updateQuantity(${item.id}, -1)" class="bg-gray-200 text-gray-700 w-7 h-7 rounded hover:bg-gray-300">
@@ -218,13 +218,13 @@ function shareOnWhatsApp() {
     cart.forEach((item, index) => {
         const itemTotal = item.price * item.quantity;
         message += `${index + 1}. *${item.name}*\n`;
-        message += `   Qty: ${item.quantity} × $${item.price.toFixed(2)} = *$${itemTotal.toFixed(2)}*\n\n`;
+        message += `   Qty: ${item.quantity} × £${item.price.toFixed(2)} = *£${itemTotal.toFixed(2)}*\n\n`;
     });
     
     // Add summary
     message += `━━━━━━━━━━━━━━━━━━━━\n`;
     message += `📦 Total Items: *${itemCount}*\n`;
-    message += `💰 Total Amount: *$${cartTotal.toFixed(2)}*\n`;
+    message += `💰 Total Amount: *£${cartTotal.toFixed(2)}*\n`;
     message += `━━━━━━━━━━━━━━━━━━━━\n\n`;
     message += `📍 Order from: FreshMart Online\n`;
     message += `🕒 ${new Date().toLocaleString()}\n`;
